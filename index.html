@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="webfonts/all.css" />
+  </head>
+  <body>
+    <header>
+      <i class="fa fa-bars" id="burger-menu"></i>
+      <h1>Новые технологии <span>24</span></h1>
+      <div class="cont-search">
+        <input
+          type="search"
+          placeholder="искать coтрудника,документ прочее..."
+        />
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="clock-analog">
+        <p>10:06</p>
+      </div>
+      <div class="fin-header">
+        <div class="item-fin_header">
+          <i class="fa fa-flag"></i>
+          <span>9</span>
+        </div>
+        <div class="item-fin_header">
+          <i class="fa fa-circle-stop"></i>
+          <span>РАБОТАЮ</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content_main">
+        <ul class="nav-links">
+          <li>
+            <a href="#"><i class="fas fa-clipboard-list menuebar"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-envelope menuebar1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-k menuebar2"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-calendar-check menuebar"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-group menuebar4"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-comment-alt menuebar"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-inbox menuebar"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-calendar menuebar"></i></a>
+          </li>
+        </ul>
+        <ul class="nav-links links2">
+          <li><a href="#">ОУ</a></li>
+          <li><a href="#">MM</a></li>
+          <li><a href="#">RA</a></li>
+          <li><a href="#">33</a></li>
+        </ul>
+        <ul class="nav-links">
+          <i class="fa fa-circle-question"></i>
+          <i class="fa fa-share-alt"></i>
+          <i class="fa fa-gear"></i>
+        </ul>
+      </div>
+      <section>
+        <div class="left-section">
+      
+          <div class="cont-icons">
+
+
+            <input type="search" class="open__search" placeholder="Поиск...">
+
+            <i class="fa fa-folder-open-o newFolderIcon">
+              <i class="fa fa-plus" id="new-folder"></i>
+            </i>
+            <i class="fa-solid fa-key" id="new-key"></i>
+            <i class="fa fa-gear"></i>
+            <i class="fa fa-search" id="open-search__block"></i>
+          </div>
+        <div class="content-leftSection">
+            <div class="newFolder">
+                <i class="fa fa-plus"></i>
+                <p>Добавить папку</p>
+              </div>
+        </div>
+        </div>
+        <article>
+          <div class="content-article">
+            <h2>Название !</h2>
+            <h2>URL</h2>
+            <i class="fa fa-star" id="starOrange"></i>
+          </div>
+          <div class="contentArticle">
+            <div class="newFolder newPassword">
+              <i class="fa fa-plus"></i>
+              <p>Добавить пароль</p>
+            </div>
+          </div>
+
+
+          <div class="poppen">
+            <nav class="pennva" style="width:100%;height: 50px;border:1px outset; background: #dae3f8; display: flex;justify-content:space-between;align-items: center;">
+              <h2 class="popup1h2" style="color:#4798f0; font-size:18px;margin: 10px;">Изменить папку</h2>
+              <i class="fa fa-trash"style="color:#4798f0; font-size:20px;  cursor: pointer;"></i>
+              <i class="fa-solid fa-xmark closePopup2" style="color:#4798f0; font-size:20px; padding: 15px; cursor: pointer;"  onclick="toggleDiv()"></i>
+              
+            </nav>
+            <div class="pendiv1">
+              <h5 class="penh5">Название:</h5>
+              <input type="text" class="peninput1" placeholder="Название проекта">
+          </div>
+          <div class="pendiv2">
+            <h5 class="h5pen">Логин: </h5>
+            <input type="text" class="peninput2" placeholder="login">
+        </div>
+        <div class="pendiv3">
+          <h5 class="pen3">Пароль: </h5>
+          <input type="password" id="peninput3" placeholder="***********" oninput="checkPasswordStrength()">
+          <i id="icon" class="fa-regular fa-eye" style="position: relative;right:55px;"></i>
+      </div>
+      <div class="pendiv4">
+          <h5 class="pen3">Повторите:</h5>
+          <input type="text" id="peninput4" placeholder="" readonly>
+          <i class="fa fa-eye-slash"style="color:grey;font-size: 18px;position:relative;right:55px;" ></i>
+      </div>
+      <div class="pendiv5">
+        <h5 class="pen3">Сложность:</h5>
+        <div id="password-strength" class="password-strength"></div>
+        <button class="pen5but"  onclick="createPasswordd()"><i class="fa fa-rotate-right"></i>Придумать пароль</button>
+    </div>
+      <div class="pendiv6">
+          <h5 class="pen3">URL:</h5>
+          <input type="url" class="peninput6" placeholder="https:">
+      </div>
+      <hr color="grey" width="100%">
+      <div class="pendiv7">
+        <h5 class="pen7">Комментарий:</h5>
+        <input type="text" class="peninput7" maxlength="1200">
+    </div>
+    <div class="pendiv8">
+      <h5 class="pen8">Цвет пароля:</h5>
+      <div class="contrast-buttons">
+          <button
+          type="button"
+          class="contrast-button contrast-button--red"
+          data-color="red"
+          title="Red">
+        </button>
+        <button
+        type="button"
+        class="contrast-button contrast-button--orange"
+        data-color="orange"
+        title="Orange">
+      </button>
+      <button
+        type="button"
+        class="contrast-button contrast-button--yellow"
+        data-color="yellow"
+        title="Yellow">
+      </button>
+        <button
+          type="button"
+          class="contrast-button contrast-button--yellowgreen"
+          data-color="yellowgreen"
+          title="Yellowgreen">
+        </button>
+        <button
+        type="button"
+        class="contrast-button contrast-button--green"
+        data-color="green"
+        title="Green">
+      </button>
+      <button
+         type="button"
+         class="contrast-button contrast-button--cyan"
+         data-color="cyan"
+         title="Cyan">
+          </button>
+          <button
+          type="button"
+          class="contrast-button contrast-button--skyblue"
+          data-color="skyblue"
+          title="Skyblue">
+           </button>
+           <button
+           type="button"
+           class="contrast-button contrast-button--blue"
+           data-color="blue"
+           title="Blue">
+            </button>
+            <button
+            type="button"
+            class="contrast-button contrast-button--purple"
+            data-color="purple"
+            title="Purple">
+             </button>
+             <button
+             type="button"
+             class="contrast-button contrast-button--pink"
+             data-color="pink"
+             title="Pink">
+              </button>
+              <button
+              type="button"
+              class="contrast-button contrast-button--grey"
+              data-color="grey"
+              title="Grey">
+               </button>
+               <button
+               type="button"
+               class="contrast-button contrast-button--grey1"
+               data-color="grey1"
+               title="Grey1">
+                </button>
+                <button type="button" 
+                class="contrast-button contrast-button--white" 
+                data-color="white"
+                title="White"> 
+            </button>
+        </div>
+        <div class="demo-wrapper">
+          <div id="demo" class="demo"></div>
+        </div>
+       
+          </div>
+          <div class="pendiv9">
+            <button class="savedbut">Сохранить</button>
+            <button class="clearbut">Отменить</button>
+        </div>
+        </div>
+  <div class="poppen2">
+    <nav class="pennva" style="width:100%;height: 50px;border:1px outset; background: #dae3f8; display: flex;justify-content:space-between;align-items: center;">
+      <h2 class="popup1h2" style="color:#4798f0; font-size:18px;margin: 10px;">Изменить папку</h2>
+      <i class="fa fa-trash"style="color:#4798f0; font-size:20px; gap:10px; cursor: pointer; "></i>
+      <i class="fa-solid fa-xmark closePopup21" style="color:#4798f0; font-size:20px; padding: 15px; cursor: pointer;"  onclick="toggleDiv()"></i>
+    </nav>
+    <div class="pen2">
+      <h4 style="font-size: 16px;font-weight: 700;line-height: 21.28px;">Название:</h4>
+      <input type="text" placeholder="Название" style="width: 402px;height: 47px;border-radius: 10px;">
+    </div>
+    <div class="pen23">
+      <h4 style="font-size: 16px;font-weight: 700;line-height: 21.28px;">Раздел:</h4>
+      <label for="fileinp" id="f">
+        <span class="file-icon" style="font-size: 20px;
+      margin-right: 10px;position: absolute;left: 445px;top: 10px;">&#x1F4C2;</span>
+      </label>
+      <input type="file" placeholder="Добавить в..." style="width: 404px;height: 47px;border-radius: 10px; border: 1px solid;" class="inpfile" id="fileinp">
+      
+    </div>
+    <div class="pen4">
+      <h4 style="font-size: 16px;font-weight: 700;line-height: 21.28px;">Описание:</h4>
+      <input type="text" style="width:402px;height: 94px;border-radius:10px ;">
+    </div>
+    <div class="pendiv81">
+      <h5 class="pen8">Цвет пароля:</h5>
+      <div class="contrast-buttons">
+          <button
+          type="button"
+          class="contrast-button contrast-button--red"
+          data-color="red"
+          title="Red">
+        </button>
+        <button
+        type="button"
+        class="contrast-button contrast-button--orange"
+        data-color="orange"
+        title="Orange">
+      </button>
+      <button
+        type="button"
+        class="contrast-button contrast-button--yellow"
+        data-color="yellow"
+        title="Yellow">
+      </button>
+        <button
+          type="button"
+          class="contrast-button contrast-button--yellowgreen"
+          data-color="yellowgreen"
+          title="Yellowgreen">
+        </button>
+        <button
+        type="button"
+        class="contrast-button contrast-button--green"
+        data-color="green"
+        title="Green">
+      </button>
+      <button
+         type="button"
+         class="contrast-button contrast-button--cyan"
+         data-color="cyan"
+         title="Cyan">
+          </button>
+          <button
+          type="button"
+          class="contrast-button contrast-button--skyblue"
+          data-color="skyblue"
+          title="Skyblue">
+           </button>
+           <button
+           type="button"
+           class="contrast-button contrast-button--blue"
+           data-color="blue"
+           title="Blue">
+            </button>
+            <button
+            type="button"
+            class="contrast-button contrast-button--purple"
+            data-color="purple"
+            title="Purple">
+             </button>
+             <button
+             type="button"
+             class="contrast-button contrast-button--pink"
+             data-color="pink"
+             title="Pink">
+              </button>
+              <button
+              type="button"
+              class="contrast-button contrast-button--grey"
+              data-color="grey"
+              title="Grey">
+               </button>
+               <button
+               type="button"
+               class="contrast-button contrast-button--grey1"
+               data-color="grey1"
+               title="Grey1">
+                </button>
+                <button type="button" 
+                class="contrast-button contrast-button--white" 
+                data-color="white"
+                title="White"> 
+            </button>
+        </div>
+        <div class="pen5">
+          <h4>Иконка папки:</h4>
+          <button style="width:51px;height:47px;border-radius:10px;border: 1px solid #DFDFDF; cursor: pointer;"><i class='far fa-folder' style="font-size: 23px;"><i class='fas fa-star' style="font-size: 10px; display: flex;justify-content: center;align-items: center; position: absolute;top: 19px;left:135px;"></i></i></button>
+          <button style="width:51px;height:47px;border-radius:10px;border: 1px solid #DFDFDF; cursor: pointer;"><i class='far fa-folder' style="font-size: 23px;"><i class="fa fa-gear" style="font-size: 10px;display: flex;justify-content: center;align-items: center;position: absolute;top: 19px;left: 195px;"></i></i></button>
+          <button style="width:51px;height:47px;border-radius:10px;border: 1px solid #DFDFDF; cursor: pointer;"><i class='far fa-folder' style="font-size: 23px;"><i class="fa fa-address-book" style="font-size: 10px; display: flex;justify-content: center;align-items: center;position: absolute;top:19px;left: 255px;"></i></i></button>
+          <button style="width:51px;height:47px;border-radius:10px;border: 1px solid #DFDFDF; cursor: pointer;"><i class='far fa-folder' style="font-size: 23px;"><i class="fa fa-file" style="font-size:10px;display: flex;justify-content: center;align-items: center;position: absolute;top: 19px;left: 315px;"></i></i></button>
+          <button style="width:51px;height:47px;border-radius:10px;border: 1px solid #DFDFDF; cursor: pointer;"><i class='far fa-folder' style="font-size: 23px;"><i class='fas fa-trash' style="font-size: 10px;display: flex;justify-content: center;align-items: center;position: absolute;top: 19px;left: 370px;"></i></i></button>
+          <button style="width:51px;height:47px;border-radius:10px;border: 1px solid #DFDFDF; cursor: pointer;"><i class='far fa-folder' style="font-size: 23px;"><i class="fa fa-file-zip-o" style="font-size: 10px; display: flex;justify-content: center;align-items: center;position: absolute;top: 19px; left: 430px;"></i></i></button>
+        </div>
+        <div class="pen6">
+          <button class="savedbut1">Сохранить</button>
+          <button class="clearbut2">Отменить</button>
+      </div>
+  </div>
+  
+</div>
+
+  <div class="poppen3">
+    <nav class="pennva" style="width:100%;height: 50px;border:1px outset; background: #dae3f8; display: flex;justify-content:space-between;align-items: center;">
+      <h2 class="popup1h2" style="color:#4798f0; font-size:18px;margin: 10px;">Доступ</h2>
+      <i class="fa-solid fa-xmark closePopup3" style="color:#4798f0; font-size:20px; padding: 15px; cursor: pointer;"  onclick="toggleDiv()"></i>
+    </nav>
+    <div class="pop1 pop">
+                   <div class="poph1img"></div>
+                    <h5 class="poph5">Фамилия Имя Отчество</h5>
+                    <input type="text"class="popinp" placeholder="Редактирование">
+                    <i class="fa fa-trash" style="color:#4798f0; font-size:20px;margin:10px;cursor: pointer;"></i>
+                </div>
+                <div class="pop2 pop">
+                    <div class="poph2img"></div>
+                    <h5 class="poph5">Фамилия Имя Отчество</h5>
+                    <input type="text" class="popinp" placeholder="Чтение">
+                    <i class="fa fa-trash" style="color:#4798f0; font-size:20px;margin:10px;cursor: pointer;"></i>
+                </div>
+                <div class="pop3 pop">
+                    <div class="poph3img"></div>
+                    <h5 class="poph5">Фамилия Имя Отчество</h5>
+                    <input type="text" class="popinp" placeholder="Редактирование">
+                    <i class="fa fa-trash" style="color:#4798f0; font-size:20px;margin:10px;cursor: pointer;"></i>
+                </div>
+                <div class="pop4 pop">
+                    <div class="poph4img"></div>
+                    <h5 class="poph5">Фамилия Имя Отчество</h5>
+                    <input type="text" class="popinp" placeholder="Редактирование">
+                    <i class="fa fa-trash"style="color:#4798f0; font-size:20px;margin:10px;cursor: pointer; "></i>
+                </div>
+                <div class="pen7">
+                  <button class="savebut2">Добавить пользователя</button>         
+                </div>
+  </div> 
+        </article>
+        <div class="right-section">
+          <h2>Название папки</h2>
+          <div class="name-r">
+            <h3 class="name_1">Название</h3>
+            <input type="text" placeholder="Название" class="right-input" />
+            <i
+              class="fas fa-copy"
+              style="
+                color: #7c7e83;
+                font-size: 18px;
+                cursor: pointer;
+                position: relative;
+                left: -15%;
+                top: -10%;
+              "
+              onclick="copyPassword()"
+            ></i>
+          </div>
+          <h3 class="name_1" style="align-self: flex-start; padding: 10px">
+            Описание:
+          </h3>
+          <input type="text" class="description" />
+          <div class="cont-popup">
+            <button class="xmarkbut">
+              <i class="fa fa-lock"></i>
+              Доступ
+            </button>
+            <button class="xmarkbut1">
+              <i class="fa fa-book"></i>
+              История
+            </button>
+            <button class="xmarkbut2">
+              <i class="fa fa-pen-alt"></i>
+              Изменить
+            </button>
+            <button>
+                <i class="fa fa-link"></i>
+                Ссылка
+            </button>
+          </div>
+        </div>
+       
+      </section>
+      <div class="content_main"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
